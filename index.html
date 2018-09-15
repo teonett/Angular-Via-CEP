@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html ng-app="myApp" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    
+    <head>
+
+        <title>WS CEP</title>
+
+        <!-- Meta Data -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="jquery, css3, sliding, box, menu, cube, navigation, portfolio, thumbnails" />
+        
+        <!-- Link Reference -->
+        <link href="static/css/pagestyle.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-resource.min.js"></script>
+
+        <!-- Footer Style -->
+        <style>
+            footer {
+                background-color: #0064A6;
+                color: rgb(255, 255, 255);
+                padding: 1px;
+            }
+        </style>
+
+    </head>
+
+    <body ng-controller="MainCtrl as ctrl">
+
+        <div class="jumbotron" align="center">
+            <h2 style="color: #0064A6;">Web Service AngulaJS <br>Brazilian Postal Code (CEP)</h1>
+        </div>
+        
+        <font color="#0064A6">
+        <div class="container">
+            <strong>CEP</strong>&nbsp;&nbsp;<br>
+            <input class="col-xs-2" class="form-control" value="" type="text" ng-model="ctrl.usr.cep" ng-blur="BuscarCEP()" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary" ng-click="ctrl.Teste()">Search</button>
+        </div>
+        <br>
+        
+        <div class="container">
+
+            <div class="Result">
+                
+                
+                <table class="table table-hover table-bordered">
+
+                    <thead>
+                        <tr>
+                            <th>FIELD</th>
+                            <th>SEARCH RESULT</th>
+                        </tr>
+                    </thread>
+
+                    <tr><td width=5%><strong>Street</strong></td><td>{{ctrl.usr.logradouro}}</td></tr>
+                    <tr><td width=5%><strong>District</strong></td><td>{{ctrl.usr.bairro}}</td></tr>
+                    <tr><td width=5%><strong>City</strong></td><td>{{ctrl.usr.localidade}}</td></tr>
+                    <tr><td width=5%><strong>State</strong></td><td>{{ctrl.usr.uf}}</td></tr>
+                    <tr><td width=5%><strong>IBGE</strong></td><td>{{ctrl.usr.ibge}}</td></tr>
+                    <tr><td width=5%><strong>GIA</strong></td><td>{{ctrl.usr.gia}}</td></tr>
+
+                </table>
+
+            </div>
+
+        </div>
+        </font>
+
+        <script type="text/javascript" src="static/js/angular.js"></script>
+        <script type="text/javascript" src="static/js/app.js"></script>
+
+        <!-- Page Footer -->
+        <p></p>
+        <footer>
+            <p></p>
+            <font color="#FFFFFF" size="2" face="arial">
+                <p style="text-align:center;">Copyright
+                    <span style="text-align:center;float:center;font-size: 12px; face: arial;">&copy; 2018 - TEO - WEB PROJECT
+                        <a href="http://teonett.com"></a>
+                    </span>
+                </p>
+            </font>
+        </footer>
+
+    </body>
+</html>
