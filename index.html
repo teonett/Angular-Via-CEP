@@ -21,26 +21,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-resource.min.js"></script>
 
-        <!-- Footer Style -->
-        <style>
-            footer {
-                background-color: #0064A6;
-                color: rgb(255, 255, 255);
-                padding: 1px;
-            }
-        </style>
-
     </head>
 
     <body ng-controller="MainCtrl as ctrl">
 
-        <div class="jumbotron" align="center">
-            <h2 style="color: #0064A6;">Web Service AngulaJS <br>Brazilian Postal Code (CEP)</h1>
-        </div>
+        <header><h3>Web Service AngulaJS Brazilian Postal Code (CEP)</h3></header>
         
         <font color="#0064A6">
-        <div class="container">
-            <strong>CEP</strong>&nbsp;&nbsp;<br>
+        <div class="container" style="margin-top: 85px;">
+            <strong>Postal Code</strong>&nbsp;&nbsp;<br>
             <input class="col-xs-2" class="form-control" value="" type="text" ng-model="ctrl.usr.cep" ng-blur="BuscarCEP()" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button type="button" class="btn btn-primary" ng-click="ctrl.Teste()">Search</button>
@@ -50,24 +39,21 @@
         <div class="container">
 
             <div class="Result">
-                
+
                 
                 <table class="table table-hover table-bordered">
-
-                    <thead>
-                        <tr>
-                            <th>FIELD</th>
-                            <th>SEARCH RESULT</th>
-                        </tr>
-                    </thread>
-
-                    <tr><td width=5%><strong>Street</strong></td><td>{{ctrl.usr.logradouro}}</td></tr>
-                    <tr><td width=5%><strong>District</strong></td><td>{{ctrl.usr.bairro}}</td></tr>
-                    <tr><td width=5%><strong>City</strong></td><td>{{ctrl.usr.localidade}}</td></tr>
-                    <tr><td width=5%><strong>State</strong></td><td>{{ctrl.usr.uf}}</td></tr>
-                    <tr><td width=5%><strong>IBGE</strong></td><td>{{ctrl.usr.ibge}}</td></tr>
-                    <tr><td width=5%><strong>GIA</strong></td><td>{{ctrl.usr.gia}}</td></tr>
-
+                    <tr><td><strong>Street</strong></td></tr>
+                    <tr><td>{{ctrl.usr.logradouro}}</td></tr>
+                    <tr><td><strong>District</strong></td></tr>
+                    <tr><td>{{ctrl.usr.bairro}}</td></tr>
+                    <tr><td><strong>City</strong></tr>
+                    <tr><td>{{ctrl.usr.localidade}}</td></tr>
+                    <tr><td><strong>State</strong></td></tr>
+                    <tr><td>{{ctrl.usr.uf}}</td></tr>
+                    <tr><td><strong>IBGE</strong></td></tr>
+                    <tr><td>{{ctrl.usr.ibge}}</td></tr>
+                    <tr><td><strong>GIA</strong></td></tr>
+                    <tr><td>{{ctrl.usr.gia}}</td></tr>
                 </table>
 
             </div>
@@ -78,18 +64,7 @@
         <script type="text/javascript" src="static/js/angular.js"></script>
         <script type="text/javascript" src="static/js/app.js"></script>
 
-        <!-- Page Footer -->
-        <p></p>
-        <footer>
-            <p></p>
-            <font color="#FFFFFF" size="2" face="arial">
-                <p style="text-align:center;">Copyright
-                    <span style="text-align:center;float:center;font-size: 12px; face: arial;">&copy; 2018 - TEO - WEB PROJECT
-                        <a href="http://teonett.com"></a>
-                    </span>
-                </p>
-            </font>
-        </footer>
+        <footer>&copy; 2020 - Jose Teotonio - teonett@gmail.com</footer>
 
     </body>
 </html>
